@@ -1,0 +1,8 @@
+import {createContext} from "react";
+
+// inna hama child kenektama values pass karnna tm userContext  ek use krnne
+
+const UserContext=createContext<string|undefined>(undefined);
+
+
+export default UserContext;
