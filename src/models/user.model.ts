@@ -1,6 +1,7 @@
 import {Document,Schema,model} from "mongoose";
 import * as SchemaTypes from "../types/SchemaTypes";
 
+
 //userSchema ek type safe karanna tm me interface ek gnne
 //  interface Iuser extends Document{
 //     username:string,
