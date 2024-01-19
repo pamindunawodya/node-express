@@ -101,7 +101,12 @@ export const signUsers=async (req:express.Request,res:express.Response)=>  {
 
     let user:SchemaTypes.Iuser|null=await UserModel.findOne({email:request_body.email});
     if(user){
-        if (user.password==request_body.password){
+
+        //ecrypt krl tyn nisa dcryprt krnn wenw
+       const isMatch=await bcrypt.compare(request_body.password,user.password)
+
+        // if (user.password==request_body.password){
+        if (isMatch){
 
             //0
             user.password="";
